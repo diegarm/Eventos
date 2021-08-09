@@ -1,0 +1,36 @@
+{
+    "local": "São Paulo",
+    "dataEvento": "2021-08-09T14:39:26.895Z",
+    "tema": "C#",
+    "quantidade": 1,
+    "imagemURL": "foto01.jpg",
+    "telefone": "1111",
+    "email": "c@c.com.br",
+    "lotes": [
+      {
+        "nome": "Principal",
+        "preco": 140,
+        "dataInicio": "2021-08-09T15:14:34.528Z",
+        "dataFim": "2021-08-09T15:14:34.528Z",
+        "quantidade": 100
+      },
+      {
+        "nome": "Lote 2",
+        "preco": 150,
+        "dataInicio": "2021-08-09T15:14:34.528Z",
+        "dataFim": "2021-08-09T15:14:34.528Z",
+        "quantidade": 100
+      }
+    ],
+    "redesSociais": [
+      {
+        "nome": "Facebook",
+        "url": "diego.npp"
+      },
+      {
+        "nome": "Instagram",
+        "url": "dgo.npp"
+      }
+    ],
+    "palestranteEventos": []
+  }

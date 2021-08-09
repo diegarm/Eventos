@@ -1,35 +1,58 @@
 <h2>Eventos</h2>
 <hr>
 
-<form action="" class="form-inline">
+<div  class="form-inline">
   <div class="form-group mb-2">
-  <input type="text" class="form-control mr-2" placeholder="buscar">
-  <button class="btn btn-outline-success">Buscar</button>
+  <label class="mr-2">Filtro:</label>
+  <input
+        type="text"
+        class="form-control mr-2"
+        placeholder="buscar"
+        [(ngModel)]="filtroLista"
+        >
 </div>
-</form>
+</div>
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
       <th>#</th>
-      <th>Imagem</th>
-      <th>Tema</th>
+      <th>Id</th>
       <th>Local</th>
-      <th>Data</th>
-      <th>Qtd Pessoas</th>
+      <th>Tema</th>
+      <th>Quantidade</th>
       <th>Lote</th>
-      <th></th>
+      <th (click)="isImage = !isImage">Imagem</th>
+      <th>Opções</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor="let evento of eventosFiltrados">
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{{evento.eventoId}}</td>
+      <td>{{evento.local}}</td>
+      <td>{{evento.tema}}</td>
+      <td>{{evento.quantidade}}</td>
+      <td>{{evento.lote}}</td>
+      <td >
+        <img  [collapse]="isImage"
+              [isAnimated]="true"
+        src="/assets/{{evento.imagemURL}}"
+        [style.width.px]="imgWidth"
+        [style.margin.px]="imgMargin">
+
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+      </td>
     </tr>
   </tbody>
+  <tfoot *ngIf="!eventos">
+    <tr>
+      <td colspan="8" class="text-center">
+        <h5>Nenhum evento encontrado!</h5>
+      </td>
+    </tr>
+  </tfoot>
+
 </table>

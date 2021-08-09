@@ -1,0 +1,10 @@
+
+Diretivas Estruturais
+
+*ngFor
+*ngIf
+*ngShow
+
+Binding e Interpolação
+{{eventos}}
+{{eventos | json }} - Retorna o Objeto em Json
