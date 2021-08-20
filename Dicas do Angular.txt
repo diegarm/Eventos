@@ -1,0 +1,30 @@
+Diretivas Estruturais
+
+*ngFor
+*ngIf
+*ngShow
+
+Binding e Interpolação
+{{eventos}}
+{{eventos | json }} - Retorna o Objeto em Json
+
+
+/*Dicas do VSCode*/
+Para selecionar o mesmo conteúdo em outras linhas - Ctrl+D (várias vezes)
+
+
+/*Instalação para o VS Code*/
+
+- Instalar Plugin "Angular Essentials" no VsCode
+- Instalar Plugin "Auto Rename Tag" no VsCode
+- Instalar plugin "Auto Close Tag"
+- Instalar plugin "Angular File"
+- Instalar plugin "Backet Pair Colorizer 2"
+- Instalar plugin "TSLint" - Para habilitar (CTRL + SHIFT + P - Digitar TSLint e escolher Manager)
+- Fonts - npm install --save @fortawesome/fontawesome-free
+- npm install ngx-bootstrap --save
+- npm install ngx-toastr --save
+- npm install bootstrap@4
+
+---------------------------------------------------------
+Executar o Projeto - ng start ou ng serve -o

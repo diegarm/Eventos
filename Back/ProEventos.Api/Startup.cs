@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using ProEventos.Application;
 using ProEventos.Application.Contratos;
-using ProEventos.Persistence.Contexts;
+using ProEventos.Infrastructure.IoC;
 using ProEventos.Persistence.Interface;
 
 namespace ProEventos.Persistence
@@ -24,9 +23,7 @@ namespace ProEventos.Persistence
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ProEventosContext>(
-                context => context.UseSqlServer(Configuration.GetConnectionString("Default"))
-                );
+            services.AddInfrastructure(Configuration);
             services.AddControllers()
                     .AddNewtonsoftJson(x =>
                         x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); //Igornar o Cycle Json

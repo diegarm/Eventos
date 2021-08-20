@@ -1,0 +1,5 @@
+
+/*Lower Case*/
+
+Command Palette: CTRL + SHIFT + p (Mac: CMD + SHIFT + p)
+type >transform pick upper/lower case and press enter
